@@ -8,6 +8,10 @@ import { api } from "~/utils/api";
 const Home: NextPage = () => {
   const { data } = api.elevators.getAll.useQuery();
 
+  if (!data) {
+    return <></>
+  }
+  
   return (
     <div className="mx-16 mt-8">
       <h1 className="text-4xl font-bold text-white">Tesisat Listesi</h1>
