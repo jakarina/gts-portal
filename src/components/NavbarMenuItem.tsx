@@ -1,4 +1,7 @@
-function NavbarMenuItem({ title } : { title: string }) {
+type Props = {
+  title: string;};
+
+function NavbarMenuItem({ title } : Props) {
   return (
     <li>
       <a>{ title }</a>

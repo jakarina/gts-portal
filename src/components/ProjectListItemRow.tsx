@@ -1,4 +1,8 @@
-function ProjectListItemRow({ elevators }) {
+import type { RouterOutputs } from "~/utils/api";
+
+type Elevator = RouterOutputs["elevators"]["getAll"];  
+
+function ProjectListItemRow({ elevators }: { elevators: Elevator }) {
   return (
     <>
       {elevators?.map((elevator, index) => (

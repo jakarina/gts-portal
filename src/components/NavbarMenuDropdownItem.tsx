@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
 import NavbarMenuItem from "./NavbarMenuItem";
 
-function NavbarMenuDropdownItem({ mainTitle, subMenuItems }:{mainTitle:string, subMenuItems:string[]}) {
+type Props = {
+  mainTitle: string;
+  subMenuItems: string[];
+};
+
+function NavbarMenuDropdownItem({ mainTitle, subMenuItems }: Props) {
   return (
     <li>
       <a>

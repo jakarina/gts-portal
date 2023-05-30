@@ -1,6 +1,10 @@
 import AddProjectButton from "./AddProjectButton";
 
-function SearchItemWithButton({ buttonText, searchItem } : { buttonText: string, searchItem: string}) {
+type Props = {
+  buttonText: string;
+  searchItem: string;};
+
+function SearchItemWithButton({ buttonText, searchItem } : Props) {
   return (
     <div className="flex-2 mb-4 flex justify-end">
       <div className="form-control">

@@ -1,7 +1,11 @@
+import type { Elevator } from "@prisma/client";
 import ProjectListItemRow from "./ProjectListItemRow";
 
+type Props = {
+  elevators: Elevator;
+};
 
-function ProjectListView({elevators}) {
+function ProjectListView({ elevators }: Props) {
   return (
     <div className="overflow-x-auto">
       <table className="table-zebra table w-full">
@@ -16,7 +20,7 @@ function ProjectListView({elevators}) {
           </tr>
         </thead>
         <tbody>
-          <ProjectListItemRow elevators={elevators}/>
+          <ProjectListItemRow elevators={elevators} />
         </tbody>
       </table>
     </div>
